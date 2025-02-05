@@ -15,4 +15,4 @@ COPY --from=builder /app/target/*.jar /apps/shopzier-1.0-snapshot.jar
 RUN chown ${USERNAME}:${GROUP} /apps/shopzier-1.0-snapshot.jar
 EXPOSE 8080
 USER ${USERNAME}
-CMD ["java", "-jar", "shopzier-1.0-snapshot.jar", "--host", "0.0.0.0"]
+CMD ["java", "-jar", "shopzier-1.0-snapshot.jar"]
