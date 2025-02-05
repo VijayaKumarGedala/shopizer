@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk as builder
+FROM maven:eclipse-temurin:17-jdk as builder
 WORKDIR /shopzier
 COPY . .
 RUN mvn clean package
