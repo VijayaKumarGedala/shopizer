@@ -1,10 +1,9 @@
-FROM maven:3.9.9-eclipse-temurin:17-jdk as builder
-WORKDIR /shopzier
+FROM maven:3.9.9-eclipse-temurin:17-jdk AS builder 
 COPY . .
 RUN mvn clean package
 
 # Stage 2: Create a runtime image
-FROM eclipse-temurin:17-jdk-alpine as runtime
+FROM eclipse-temurin:17-jdk-alpine AS runtime
 LABEL project="java" \
       author="vijay"
 ARG USERNAME="john"
