@@ -17,6 +17,6 @@ target/
 .env
 *.properties
 
-# Ignore other unnecessary files
-Dockerfile
-README.md
+
+
+
